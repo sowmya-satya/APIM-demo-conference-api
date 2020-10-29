@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "ApimServiceName": {
+      "type": "string"
+    },
+    "PolicyXMLBaseUrl": {
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "properties": {
+        "description": "ToDoApi20200911154315",
+        "resourceId": "https://management.azure.com/subscriptions/0d3267a1-526a-4065-b240-3d4694e4cd32/resourceGroups/Shabu-APIM-POC/providers/Microsoft.Web/sites/ToDoApi20200911154315",
+        "url": "https://todoapi20200911154315.azurewebsites.net",
+        "protocol": "http"
+      },
+      "name": "[concat(parameters('ApimServiceName'), '/WebApp_todoapi20200911154315')]",
+      "type": "Microsoft.ApiManagement/service/backends",
+      "apiVersion": "2019-01-01"
+    }
+  ]
+}
